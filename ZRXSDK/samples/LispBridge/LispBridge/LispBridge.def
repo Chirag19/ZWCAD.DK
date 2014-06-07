@@ -1,0 +1,4 @@
+LIBRARY      LispBridge 
+
+EXPORTS
+		zcrxEntryPoint		PRIVATE

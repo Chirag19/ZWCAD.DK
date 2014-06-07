@@ -1,0 +1,26 @@
+HKCR
+{
+	ZwInteBase.ZwInteCom.1 = s 'ZwInteCom Class'
+	{
+		CLSID = s '{4F48F8D5-B829-41A1-B188-D2303025C545}'
+	}
+	ZwInteBase.ZwInteCom = s 'ZwInteCom Class'
+	{
+		CLSID = s '{4F48F8D5-B829-41A1-B188-D2303025C545}'
+		CurVer = s 'ZwInteBase.ZwInteCom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4F48F8D5-B829-41A1-B188-D2303025C545} = s 'ZwInteCom Class'
+		{
+			ProgID = s 'ZwInteBase.ZwInteCom.1'
+			VersionIndependentProgID = s 'ZwInteBase.ZwInteCom'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{59736E6B-D166-4B85-9237-1801A78D994D}'
+		}
+	}
+}

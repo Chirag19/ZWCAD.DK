@@ -1,0 +1,105 @@
+#ifndef ZD_DBDICT_H
+#define ZD_DBDICT_H
+
+
+#include "zdbmain.h"
+
+#pragma pack(push, 8)
+
+class ZcDbImpDictionary;
+class ZcString;
+
+class ZDESK_NO_VTABLE ZcDbDictionaryIterator: public ZcRxObject
+{
+public:
+    ZCRX_DECLARE_MEMBERS(ZcDbDictionaryIterator);
+    virtual ~ZcDbDictionaryIterator() {}
+
+    virtual const ZCHAR*      name       () const = 0;
+
+    virtual Zcad::ErrorStatus getObject  (ZcDbObject*&   pObject,
+                                          ZcDb::OpenMode mode) = 0;
+    virtual ZcDbObjectId      objectId   () const = 0;
+
+    virtual bool              done       () const = 0;
+    virtual bool              next       () = 0;
+    virtual bool              setPosition(ZcDbObjectId objId) = 0;
+
+protected:
+    ZcDbDictionaryIterator() {}
+};
+
+class ZcDbDictionary: public ZcDbObject
+{
+public:
+    ZCDB_DECLARE_MEMBERS(ZcDbDictionary);
+    ZcDbDictionary();
+    virtual ~ZcDbDictionary();
+
+
+    Zcad::ErrorStatus getAt(const ZCHAR*   entryName,
+                            ZcDbObject*&   entryObj,
+                            ZcDb::OpenMode mode) const;
+    Zcad::ErrorStatus getAt(const ZCHAR*   entryName,
+                            ZcDbObjectId&  entryObj) const;
+
+
+    Zcad::ErrorStatus nameAt(ZcDbObjectId objId,
+                             ZCHAR*&      name) const;
+    Zcad::ErrorStatus nameAt(ZcDbObjectId objId,
+                             ZcString &   name) const;
+ 
+
+    bool              has       (const ZCHAR*  entryName) const;
+    bool              has       (ZcDbObjectId objId) const;
+    Zdesk::UInt32     numEntries() const;
+
+
+    Zcad::ErrorStatus remove(const ZCHAR *  key);
+    Zcad::ErrorStatus remove(const ZCHAR *  key,
+                             ZcDbObjectId& returnId);
+    Zcad::ErrorStatus remove(ZcDbObjectId  objId);
+
+
+    bool              setName(const ZCHAR*   oldName,
+                              const ZCHAR*   newName);
+    Zcad::ErrorStatus setAt  (const ZCHAR*   srchKey,
+                              ZcDbObject*   newValue,
+                              ZcDbObjectId& retObjId);
+
+
+    bool              isTreatElementsAsHard () const;
+    void              setTreatElementsAsHard(bool doIt);
+
+
+    ZcDbDictionaryIterator* newIterator() const;
+
+
+    virtual Zcad::ErrorStatus subErase     (Zdesk::Boolean pErasing
+                                                = Zdesk::kTrue);
+    virtual Zcad::ErrorStatus dwgInFields  (ZcDbDwgFiler* pFiler);
+    virtual Zcad::ErrorStatus dwgOutFields (ZcDbDwgFiler* pFiler) const;
+    virtual Zcad::ErrorStatus dxfInFields  (ZcDbDxfFiler* pFiler);
+    virtual Zcad::ErrorStatus dxfOutFields (ZcDbDxfFiler* pFiler) const;
+
+    virtual ZcDb::DuplicateRecordCloning mergeStyle() const;
+    virtual void  setMergeStyle(ZcDb::DuplicateRecordCloning style);
+
+
+    virtual void goodbye(const ZcDbObject* pObject);
+    virtual void erased (const ZcDbObject* pObject,
+                         Zdesk::Boolean pErasing = Zdesk::kTrue);
+
+
+    virtual Zcad::ErrorStatus decomposeForSave(
+                                  ZcDb::ZcDbDwgVersion ver,
+                                  ZcDbObject*&         replaceObj,
+                                  ZcDbObjectId&        replaceId,
+                                  Zdesk::Boolean&      exchangeXData);
+
+    virtual Zcad::ErrorStatus getClassID(CLSID* pClsid) const;
+};
+
+#pragma pack(pop)
+
+#endif

@@ -1,0 +1,6 @@
+; ScreenMenu.def
+
+LIBRARY      "ScreenMenu"
+
+EXPORTS
+    zcrxEntryPoint PRIVATE

@@ -1,0 +1,43 @@
+// CustomEntComWrap.idl : 
+//
+
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+[
+	uuid(B171CB71-BE1A-4A59-B953-EDABBC112FA9),
+	version(1.0),
+	helpstring("CustomEntComWrap 1.0 Type Library")
+]
+library CustomEntComWrapLib
+{
+	importlib("stdole2.tlb");
+	importlib("stdole32.tlb");
+	importlib("..\..\..\inc\zxdb.tlb");
+	[
+		uuid(238CAC50-0143-4400-B45D-88EF2D1E04BF),
+		helpstring("SignEntityCom Class")
+	]
+	coclass SignEntityCom
+	{
+		[default] interface ISignEntityCom;
+		[source] interface IZcadObjectEvents;
+	};
+
+	[
+		object,
+		uuid(B3195F9C-7DA5-44A6-8975-35E1F41EA1C8),
+		dual,
+		nonextensible,
+		helpstring("ISignEntityCom Interface"),
+		pointer_default(unique)
+	]
+	interface ISignEntityCom : IZcadEntity{
+		[propget, id(1), helpstring("Property Radius")] HRESULT Radius([out, retval] DOUBLE* pVal);
+		[propput, id(1), helpstring("Property Radius")] HRESULT Radius([in] DOUBLE newVal);
+		[propget, id(2), helpstring("Property Center")] HRESULT Center([out, retval] VARIANT* pVal);
+		[propput, id(2), helpstring("Property Center")] HRESULT Center([in] VARIANT newVal);
+	};
+};

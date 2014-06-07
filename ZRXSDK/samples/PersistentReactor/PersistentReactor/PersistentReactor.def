@@ -1,0 +1,6 @@
+; PersistentReactor.def 
+
+LIBRARY      "PersistentReactor"
+
+EXPORTS
+    zcrxEntryPoint		PRIVATE

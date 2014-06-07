@@ -1,0 +1,7 @@
+; SimpleLine.def : Declares the module parameters for the DLL.
+
+LIBRARY      "SimpleLine"
+
+EXPORTS
+    ; Explicit exports can go here
+	  zcrxEntryPoint PRIVATE

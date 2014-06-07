@@ -1,0 +1,27 @@
+HKCR
+{
+	CustomEntComWrap.SignEntityCom.1 = s 'SignEntityCom Class'
+	{
+		CLSID = s '{238CAC50-0143-4400-B45D-88EF2D1E04BF}'
+	}
+	CustomEntComWrap.SignEntityCom = s 'SignEntityCom Class'
+	{
+		CLSID = s '{238CAC50-0143-4400-B45D-88EF2D1E04BF}'
+		CurVer = s 'CustomEntComWrap.SignEntityCom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {238CAC50-0143-4400-B45D-88EF2D1E04BF} = s 'SignEntityCom Class'
+		{
+			ProgID = s 'CustomEntComWrap.SignEntityCom.1'
+			VersionIndependentProgID = s 'CustomEntComWrap.SignEntityCom'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{B171CB71-BE1A-4A59-B953-EDABBC112FA9}'
+		}
+	}
+}

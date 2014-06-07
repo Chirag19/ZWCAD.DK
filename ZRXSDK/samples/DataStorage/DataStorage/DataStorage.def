@@ -1,0 +1,4 @@
+LIBRARY      DataStorage 
+
+EXPORTS
+		zcrxEntryPoint		PRIVATE

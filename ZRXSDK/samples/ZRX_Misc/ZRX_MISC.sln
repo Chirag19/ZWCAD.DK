@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomEntComWrap", "CustomEntComWrap\CustomEntComWrap.vcproj", "{8C505E7B-2462-495E-9B7F-72BEEF9F7B9D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SignEntityDb", "SignEntityDb\SignEntityDb.vcproj", "{7BD9B642-A79E-4CA2-83FB-71C77450A9BC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SignEntityUi", "SignEntityUi\SignEntityUi.vcproj", "{B639AD21-D702-4EB6-83C9-14F14E84D450}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C505E7B-2462-495E-9B7F-72BEEF9F7B9D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8C505E7B-2462-495E-9B7F-72BEEF9F7B9D}.Debug|Win32.Build.0 = Debug|Win32
+		{8C505E7B-2462-495E-9B7F-72BEEF9F7B9D}.Release|Win32.ActiveCfg = Release|Win32
+		{8C505E7B-2462-495E-9B7F-72BEEF9F7B9D}.Release|Win32.Build.0 = Release|Win32
+		{7BD9B642-A79E-4CA2-83FB-71C77450A9BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7BD9B642-A79E-4CA2-83FB-71C77450A9BC}.Debug|Win32.Build.0 = Debug|Win32
+		{7BD9B642-A79E-4CA2-83FB-71C77450A9BC}.Release|Win32.ActiveCfg = Release|Win32
+		{7BD9B642-A79E-4CA2-83FB-71C77450A9BC}.Release|Win32.Build.0 = Release|Win32
+		{B639AD21-D702-4EB6-83C9-14F14E84D450}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B639AD21-D702-4EB6-83C9-14F14E84D450}.Debug|Win32.Build.0 = Debug|Win32
+		{B639AD21-D702-4EB6-83C9-14F14E84D450}.Release|Win32.ActiveCfg = Release|Win32
+		{B639AD21-D702-4EB6-83C9-14F14E84D450}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+; DocumentManager.def : 
+
+LIBRARY      "DocumentManager"
+
+EXPORTS
+   
+    zcrxEntryPoint		PRIVATE

@@ -1,0 +1,6 @@
+; SignEntityDb.def 
+
+LIBRARY      "SignEntityDb"
+
+EXPORTS
+

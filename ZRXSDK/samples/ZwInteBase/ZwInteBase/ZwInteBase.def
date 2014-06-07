@@ -1,0 +1,6 @@
+; ZwInteBase.def : Declares the module parameters.
+
+LIBRARY      "ZwInteBase.DLL"
+
+EXPORTS
+	zcrxEntryPoint		PRIVATE

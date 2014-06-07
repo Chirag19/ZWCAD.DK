@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZwInteApp1", "ZwIntePldm\ZwIntePldm.vcproj", "{BCD5E06A-3C76-4CF4-BE1E-35EA3C93DBD4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZwInteBase", "ZwInteBase\ZwInteBase.vcproj", "{57D14C60-B121-4A38-8F50-53B0AFB4EBAD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZwInteApp2", "ZwInteApp\ZwInteApp.vcproj", "{025BB179-1B1D-4DBB-AFFB-F6B85CBB5425}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCD5E06A-3C76-4CF4-BE1E-35EA3C93DBD4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCD5E06A-3C76-4CF4-BE1E-35EA3C93DBD4}.Debug|Win32.Build.0 = Debug|Win32
+		{BCD5E06A-3C76-4CF4-BE1E-35EA3C93DBD4}.Release|Win32.ActiveCfg = Release|Win32
+		{BCD5E06A-3C76-4CF4-BE1E-35EA3C93DBD4}.Release|Win32.Build.0 = Release|Win32
+		{57D14C60-B121-4A38-8F50-53B0AFB4EBAD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57D14C60-B121-4A38-8F50-53B0AFB4EBAD}.Debug|Win32.Build.0 = Debug|Win32
+		{57D14C60-B121-4A38-8F50-53B0AFB4EBAD}.Release|Win32.ActiveCfg = Release|Win32
+		{57D14C60-B121-4A38-8F50-53B0AFB4EBAD}.Release|Win32.Build.0 = Release|Win32
+		{025BB179-1B1D-4DBB-AFFB-F6B85CBB5425}.Debug|Win32.ActiveCfg = Debug|Win32
+		{025BB179-1B1D-4DBB-AFFB-F6B85CBB5425}.Debug|Win32.Build.0 = Debug|Win32
+		{025BB179-1B1D-4DBB-AFFB-F6B85CBB5425}.Release|Win32.ActiveCfg = Release|Win32
+		{025BB179-1B1D-4DBB-AFFB-F6B85CBB5425}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

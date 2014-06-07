@@ -1,0 +1,9 @@
+; CustomEntComWrap.def : 
+
+LIBRARY      "CustomEntComWrap.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

@@ -1,0 +1,43 @@
+// ZwInteBase.idl : IDL source for ZwInteBase
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ZwInteBase.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(3FDDB95D-F740-4073-8DF9-A400ED627716),
+	dual,
+	nonextensible,
+	helpstring("IZwInteCom Interface"),
+	pointer_default(unique)
+]
+interface IZwInteCom : IDispatch{
+	[id(1), helpstring("method ReadTbData")] HRESULT ReadTbData([in] BSTR titleDef, [in] BSTR bomDef, [in] BSTR dwgPath);
+	[id(2), helpstring("method WriteTbData")] HRESULT WriteTbData([in] BSTR titleData, [in] BSTR bomData, [in] BSTR dwgPath);
+	[id(3), helpstring("method ReadTbDataX")] HRESULT ReadTbDataX([in] BSTR inputXmlPath);
+	[id(4), helpstring("method WriteTbDataX")] HRESULT WriteTbDataX([in] BSTR inputXmlPath);
+	[id(5), helpstring("method InsertText")] HRESULT InsertText([in] BSTR strToDwg, [in] BSTR strTextConts);
+	[id(6), helpstring("method InsertBmp")] HRESULT InsertBmp([in] BSTR strToDwg, [in] BSTR strDefConts);
+	[id(7), helpstring("method InsertDwg")] HRESULT InsertDwg([in] BSTR strToDwg, [in] BSTR strDefConts);
+};
+[
+	uuid(59736E6B-D166-4B85-9237-1801A78D994D),
+	version(1.0),
+	helpstring("ZwInteBase 1.0 Type Library")
+]
+library ZwInteBaseLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(4F48F8D5-B829-41A1-B188-D2303025C545),
+		helpstring("ZwInteCom Class")
+	]
+	coclass ZwInteCom
+	{
+		[default] interface IZwInteCom;
+	};
+};
